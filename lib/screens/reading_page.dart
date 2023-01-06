@@ -37,26 +37,11 @@ class SurahPage extends StatelessWidget {
                     for (var i = 1; i <= count; i++) ...{
                       TextSpan(
                         text:
-                            ' ${quran.getVerse(index, i, verseEndSymbol: false)} ',
+                            ' ${quran.getVerse(index, i, verseEndSymbol: true)}',
                         style: const TextStyle(
                           fontFamily: 'Kitab',
                           fontSize: 25.0,
                           color: Colors.white,
-                        ),
-                      ),
-                      WidgetSpan(
-                        alignment: PlaceholderAlignment.middle,
-                        child: CircleAvatar(
-                          backgroundColor: const Color(0xFFECB365),
-                          radius: 14.0,
-                          child: Text(
-                            '$i',
-                            textAlign: TextAlign.center,
-                            textScaleFactor: i.toString().length <= 2 ? 1 : 0.8,
-                            style: const TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
                         ),
                       ),
                     }
